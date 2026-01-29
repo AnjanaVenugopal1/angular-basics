@@ -7,7 +7,7 @@ import { Dashboard } from './pages/dashboard/dashboard';
 
 export const routes: Routes = [
     {
-        path: 'landingpage', component:LandingPage
+        path: '', component:LandingPage
     },
     {
         path: 'login', component:Login
