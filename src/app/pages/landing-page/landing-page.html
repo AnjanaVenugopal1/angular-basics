@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="text-center">
+    <h1 class="text-center text-red">Angular JS Introduction</h1>
+    
+    <h3>{{dataBinding}}</h3>
+    <h2>{{version}}</h2>
+    <img [src]="imgUrl" width="100px" alt="">
+    <br> <br>
+
+    <!-- event binding (html -> ts)   -->
+    <!-- <button (click)="btnClick()" class="btn btn-info">Get Started</button> -->
+
+    <!-- directives use -->
+    @if(isStatus){
+      <button (click)="btnClick()" class="btn btn-info">Get Started</button> 
+    }
+    @else {
+      <h1>Error!</h1>
+    }
+
+    @for (item of todos; track $index) {
+
+      <h1>{{item.title}}</h1>
+      <h3>{{item.completed}}</h3>
+
+    }
+
+
+
+<!-- event binding using $event -->
+    <input (change)="getDetails($event)" type="text">
+
+    <!-- template reference variable -->
+     <input type="text" #inputData (change)="getName(inputData)">
+  </div>
+</div>
